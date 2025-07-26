@@ -16,6 +16,8 @@
 </head>
 
 <body>
+
+    <!-- navbar -->
     <div class="nav-bar">
         <ul>
             <li><a href="#home"><span class="nav-icon"><i class="fa-solid fa-house"></i></span><span class="nav-text">
@@ -28,6 +30,9 @@
                         class="nav-text"> contact</span></a></li>
         </ul>
     </div>
+
+    <!-- home -->
+
     <section id="home">
         <div class="intro">
             <p id="location">based in bangladesh</p>
@@ -52,8 +57,10 @@
             </div>
             <span id="copy-status"></span>
         </div>
-
     </section>
+
+    <!-- about -->
+
     <section id="about">
         <h2 class="heading">current technologies</h2>
         <p class="about-text">I'm skilled in a variety of modern technologies that enable me to craft robust,
@@ -69,14 +76,14 @@
             <div class="technology">
                 <img src="/image/logo/css.png" alt="" class="technology-logo">
                 <div class="technology-text">
-                    <div class="technology-title">css</div>
+                    <div class="technology-title">CSS</div>
                     <div class="technology-subtitle">web styling</div>
                 </div>
             </div>
             <div class="technology">
                 <img src="/image/logo/js.png" alt="" class="technology-logo">
                 <div class="technology-text">
-                    <div class="technology-title">javascript</div>
+                    <div class="technology-title">javaScript</div>
                     <div class="technology-subtitle">web interactivity</div>
                 </div>
             </div>
@@ -90,7 +97,7 @@
             <div class="technology">
                 <img src="/image/logo/php.png" alt="" class="technology-logo">
                 <div class="technology-text">
-                    <div class="technology-title">php</div>
+                    <div class="technology-title">pHP</div>
                     <div class="technology-subtitle">server-side scripting</div>
                 </div>
             </div>
@@ -104,14 +111,14 @@
             <div class="technology">
                 <img src="/image/logo/mysql.png" alt="" class="technology-logo">
                 <div class="technology-text">
-                    <div class="technology-title">mysql</div>
+                    <div class="technology-title">mySql</div>
                     <div class="technology-subtitle">relational database</div>
                 </div>
             </div>
             <div class="technology">
                 <img src="/image/logo/nodejs.png" alt="" class="technology-logo">
                 <div class="technology-text">
-                    <div class="technology-title">nodejs</div>
+                    <div class="technology-title">nodeJs</div>
                     <div class="technology-subtitle">js runtime backend</div>
                 </div>
             </div>
@@ -132,7 +139,7 @@
             <div class="technology">
                 <img src="/image/logo/mongodb.png" alt="" class="technology-logo">
                 <div class="technology-text">
-                    <div class="technology-title">mongodb</div>
+                    <div class="technology-title">mongoDB</div>
                     <div class="technology-subtitle">nosql database</div>
                 </div>
             </div>
@@ -174,7 +181,7 @@
             <div class="technology">
                 <img src="/image/logo/java.png" alt="" class="technology-logo">
                 <div class="technology-text">
-                    <div class="technology-title">javafx</div>
+                    <div class="technology-title">javaFX</div>
                     <div class="technology-subtitle">java ui toolkit</div>
                 </div>
             </div>
@@ -187,6 +194,162 @@
             </div>
         </div>
     </section>
+
+    <!-- projects -->
+
+    <section id="projects">
+        <h2 class="heading">my portfolio</h2>
+        <p class="about-text">Here are some of the projects I've worked on, showcasing my skills in web and software
+            development:</p>
+        <div class="project-holder">
+            <div class="project">
+                <div class="project-image-wrapper">
+                    <img src="/image/project/project1.png" alt="Project 1" class="project-image" />
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">BookLog</h3>
+                    <div class="project-tag-holder">
+                        <span class="project-tag">React</span>
+                        <span class="project-tag">Express</span>
+                        <span class="project-tag">MongoDB</span>
+                        <span class="project-tag">Node.js</span>
+                        <span class="project-tag">CSS</span>
+                        <span class="project-tag">Bootstrap</span>
+                    </div>
+                    <div class="project-link-holder">
+                        <a href="https://github.com/sifatul-islam-onik/bookLog" class="project-link"><i
+                                class="fa-solid fa-code"></i></a>
+                        <a href="https://booklog-07k6.onrender.com/" class="project-link"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-image-wrapper">
+                    <img src="/image/project/project4.png" alt="Project 4" class="project-image" />
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">LostLink</h3>
+                    <div class="project-tag-holder">
+                        <span class="project-tag">Laravel</span>
+                        <span class="project-tag">PHP</span>
+                        <span class="project-tag">HTML</span>
+                        <span class="project-tag">CSS</span>
+                        <span class="project-tag">JavaScript</span>
+                        <span class="project-tag">MySQL</span>
+
+                    </div>
+                    <div class="project-link-holder">
+                        <a href="https://github.com/sifatul-islam-onik/Lost-and-Found" class="project-link"><i
+                                class="fa-solid fa-code"></i></a>
+                        <a href="https://lostlink.great-site.net/" class="project-link"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-image-wrapper">
+                    <img src="/image/project/project2.png" alt="Project 2" class="project-image" />
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">ChatterBox</h3>
+                    <div class="project-tag-holder">
+                        <span class="project-tag">Android</span>
+                        <span class="project-tag">Java</span>
+                        <span class="project-tag">XML</span>
+                        <span class="project-tag">Firebase</span>
+                    </div>
+                    <div class="project-link-holder">
+                        <a href="https://github.com/sifatul-islam-onik/Online-Chatting-App" class="project-link"><i
+                                class="fa-solid fa-code"></i></a>
+                        <a href="#" class="project-link disabled-project"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-image-wrapper">
+                    <img src="/image/project/project3.png" alt="Project 3" class="project-image" />
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Store Management System</h3>
+                    <div class="project-tag-holder">
+                        <span class="project-tag">Desktop Application</span>
+                        <span class="project-tag">JavaFx</span>
+                        <span class="project-tag">FXML</span>
+                        <span class="project-tag">MySQL</span>
+                    </div>
+                    <div class="project-link-holder">
+                        <a href="https://github.com/sifatul-islam-onik/Store-Management-System" class="project-link"><i
+                                class="fa-solid fa-code"></i></a>
+                        <a href="#" class="project-link disabled-project"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact -->
+
+    <section id="contact">
+        <h2 class="heading">get in touch</h2>
+        <p class="about-text">I'm always open to discussing new projects, creative ideas, or opportunities to be part of
+            your vision. Feel free to reach out!</p>
+        <div class="contact-form-holder">
+            <form action="#" method="post" class="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <div class="copyright">
+            <p class="title">md sifatul islam</p>
+            <p class="subtitle">&copy; <?php date('Y') ?> | All rights reserved.</p>
+        </div>
+        <div class="links">
+            <div class="link-category">
+                <h3 class="category-title">navigate</h3>
+                <ul>
+                    <li><a href="#home">home</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#projects">projects</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </div>
+            <div class="link-category">
+                <h3 class="category-title">projects</h3>
+                <ul>
+                    <li><a href="#">project 1</a></li>
+                    <li><a href="#">project 2</a></li>
+                    <li><a href="#">project 3</a></li>
+                    <li><a href="#">project 4</a></li>
+                </ul>
+            </div>
+            <div class="link-category">
+                <h3 class="category-title">socials</h3>
+                <ul>
+                    <li><a href="mailto:sifatul.islam.onik@gmail.com"><i class="fa-solid fa-envelope"></i> <span
+                                id="footer-email-short">email</span> <span id="footer-email"
+                                style="text-transform:none;">sifatul.islam.onik@gmail.com</span></a></li>
+                    <li><a href="https://github.com/sifatul-islam-onik" target="_blank"><i
+                                class="fa-brands fa-github"></i> github</a></li>
+                    <li><a href="https://www.linkedin.com/in/sifatul-islam-onik/" target="_blank"><i
+                                class="fa-brands fa-square-linkedin"></i> linkedIn</a></li>
+                    <li><a href="https://www.facebook.com/sifatul.islam.onik" target="_blank"><i
+                                class="fa-brands fa-facebook"></i> facebook</a></li>
+                    <li> <a href="https://t.me/sifatul_islam_onik" target="_blank"><i class="fa-brands fa-telegram"></i>
+                            telegram</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
     <script src="/js/index.js"></script>
 </body>
 
