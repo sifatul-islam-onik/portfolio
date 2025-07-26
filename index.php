@@ -31,6 +31,35 @@
         </ul>
     </div>
 
+    <!-- Modal -->
+    <div id="project-modal" class="modal hidden">
+        <div class="modal-content">
+            <span id="modal-close" class="close">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- project-modal-template -->
+    <template id="project-template">
+        <div class="project-detail">
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+            <p id="modal-arrow"><i class="fa-solid fa-arrow-down"></i></p>
+            <img src="" alt="project-image" id="modal-image">
+            <div class="modal-text">
+                <div class="modal-overview">
+                    <p id="project-heading">project overview</p>
+                    <div class="project-tag-holder" style="margin-bottom:30px;"></div>
+                    <div class="modal-button-holder">
+                        <a href="#" class="work-button"><i class="fa-solid fa-globe"></i> view demo</a>
+                        <a href="#" class="work-button"><i class="fa-solid fa-code"></i> source code</a>
+                    </div>
+                </div>
+                <p id="modal-text"></p>
+            </div>
+        </div>
+    </template>
+
     <!-- home -->
 
     <section id="home">
@@ -40,7 +69,7 @@
             <p id="intro-subheading">Hi, I'm Sifat. I craft smart software solutions and dynamic web experiences that
                 are both powerful and beautifully engineered.</p>
             <div class="intro-button-holder">
-                <a href="#projects" id="work-button">see my work <i class="fa-solid fa-angle-right"></i></a>
+                <a href="#projects" class="work-button">see my work <i class="fa-solid fa-angle-right"></i></a>
                 <a href="#" id="resume-button"><i class="fa-solid fa-download" style="color:#3B82F6;"></i> download
                     resume</a>
             </div>
@@ -202,7 +231,7 @@
         <p class="about-text">Here are some of the projects I've worked on, showcasing my skills in web and software
             development:</p>
         <div class="project-holder">
-            <div class="project">
+            <div class="project" data-id="project1">
                 <div class="project-image-wrapper">
                     <img src="/image/project/project1.png" alt="Project 1" class="project-image" />
                 </div>
@@ -224,7 +253,7 @@
                     </div>
                 </div>
             </div>
-            <div class="project">
+            <div class="project" data-id="project4">
                 <div class="project-image-wrapper">
                     <img src="/image/project/project4.png" alt="Project 4" class="project-image" />
                 </div>
@@ -247,7 +276,7 @@
                     </div>
                 </div>
             </div>
-            <div class="project">
+            <div class="project" data-id="project2">
                 <div class="project-image-wrapper">
                     <img src="/image/project/project2.png" alt="Project 2" class="project-image" />
                 </div>
@@ -267,7 +296,7 @@
                     </div>
                 </div>
             </div>
-            <div class="project">
+            <div class="project" data-id="project3">
                 <div class="project-image-wrapper">
                     <img src="/image/project/project3.png" alt="Project 3" class="project-image" />
                 </div>
@@ -288,6 +317,7 @@
                 </div>
             </div>
         </div>
+
     </section>
 
     <!-- contact -->
