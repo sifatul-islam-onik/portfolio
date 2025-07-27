@@ -34,8 +34,20 @@
     <!-- Modal -->
     <div id="project-modal" class="modal hidden">
         <div class="modal-content">
-            <span id="modal-close" class="close">&times;</span>
+            <div class="close-wrapper">
+                <span id="modal-close" class="close">&times;</span>
+            </div>
             <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Contact-modal -->
+
+    <div id="success-modal" class="success-modal hidden">
+        <div class="success-modal-content">
+            <span class="success-close" onclick="closeModal()">&times;</span>
+            <h2>Message Recieved!</h2>
+            <p>Thank you for reaching out. I’ll get back to you soon.</p>
         </div>
     </div>
 
@@ -222,6 +234,12 @@
                 </div>
             </div>
         </div>
+
+    </section>
+
+    <section id="experience">
+        <h2 class="heading">experience</h2>
+        <p class="about-text" style="max-width:1250px; text-align:center;">I'm a 3rd-year <span class="highlight">CSE</span> student at <span class="highlight">khulna university of engineering & technology</span> with a focus on building practical software solutions. Although I haven't held a formal job yet, I've worked on several personal and academic projects using technologies like React, Node.js, Laravel, MongoDB, and Firebase. I've also built Android and desktop applications, which have helped me develop a solid grasp of both frontend and backend development. I'm looking forward to applying these skills in real-world scenarios and continuing to improve as a developer.</p>
     </section>
 
     <!-- projects -->
@@ -327,7 +345,7 @@
         <p class="about-text">I'm always open to discussing new projects, creative ideas, or opportunities to be part of
             your vision. Feel free to reach out!</p>
         <div class="contact-form-holder">
-            <form action="#" method="post" class="contact-form">
+            <form method="post" class="contact-form">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
                 <textarea name="message" placeholder="Your Message" required></textarea>
@@ -340,7 +358,7 @@
     <footer>
         <div class="copyright">
             <p class="title">md sifatul islam</p>
-            <p class="subtitle">&copy; <?php date('Y') ?> | All rights reserved.</p>
+            <p class="subtitle">&copy; <?php echo date('Y') ?> | All rights reserved.</p>
         </div>
         <div class="links">
             <div class="link-category">
@@ -355,10 +373,10 @@
             <div class="link-category">
                 <h3 class="category-title">projects</h3>
                 <ul>
-                    <li><a href="#">project 1</a></li>
-                    <li><a href="#">project 2</a></li>
-                    <li><a href="#">project 3</a></li>
-                    <li><a href="#">project 4</a></li>
+                    <li><a href="#" class="project-modal-link" data-id="project1">BookLog</a></li>
+                    <li><a href="#" class="project-modal-link" data-id="project4">LostLink</a></li>
+                    <li><a href="#" class="project-modal-link" data-id="project2">Chatterbox</a></li>
+                    <li><a href="#" class="project-modal-link" data-id="project3">Store Management System</a></li>
                 </ul>
             </div>
             <div class="link-category">

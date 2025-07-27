@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "booklog",
             description: "Track, review, and reflect on your reading journey",
             image: "/image/project/project1.png",
-            tags: ["React", "Express", "MongoDB","Node.JS","CSS","Bootstrap"],
+            tags: ["React", "Express", "MongoDB", "Node.JS", "CSS", "Bootstrap"],
             demoLink: "https://booklog-07k6.onrender.com/",
             sourceCode: "https://github.com/sifatul-islam-onik/bookLog",
             text: "A minimalist yet powerful app designed for tracking your reading journey. Users can log books, set reading goals, mark progress, and write reflections or reviews. It provides visual statistics and reminders to keep readers motivated. Developed using React with persistent cloud storage integration."
@@ -46,7 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
             tags: ["Android", "Java", "XML", "Firebase"],
             demoLink: "",
             sourceCode: "https://github.com/sifatul-islam-onik/Online-Chatting-App",
-            text: "A vibrant and interactive social media platform for Android. It allows users to post updates, share media, chat in real-time, and engage with a growing community. The app features a sleek UI, notification system, and profile customization. Developed natively for Android with Firebase backend support."
+            text: "A vibrant and interactive social media platform for Android. It allows users to post updates, share media, chat in real-time, and engage with a growing community. The app features a sleek UI, notification system, and profile customization. Developed natively for Android with Firebase backend support.",
+            disabled: "disabled-project"
         },
         project3: {
             title: "store management system",
@@ -55,9 +56,10 @@ document.addEventListener('DOMContentLoaded', () => {
             tags: ["Desktop Application", "JavaFX", "FXML", "MySQL"],
             demoLink: "",
             sourceCode: "https://github.com/sifatul-islam-onik/Store-Management-System",
-            text: "A robust desktop application designed for small to medium-sized businesses to manage inventory and item records. Features include item addition, categorization, stock alerts, transaction logs, and report generation. Built using Electron with a local database for offline-first capability and high performance."
+            text: "A robust desktop application designed for small to medium-sized businesses to manage inventory and item records. Features include item addition, categorization, stock alerts, transaction logs, and report generation. Built using Electron with a local database for offline-first capability and high performance.",
+            disabled: "disabled-project"
         },
-        
+
     };
 
     const modal = document.getElementById('project-modal');
@@ -65,8 +67,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const template = document.getElementById('project-template');
     const closeModalBtn = document.getElementById('modal-close');
 
-    document.querySelectorAll('.project').forEach(project => {
-        project.addEventListener('click', () => {
+    document.querySelectorAll('.project, .project-modal-link').forEach(project => {
+        project.addEventListener('click', (e) => {
+            e.preventDefault();
             const id = project.getAttribute('data-id');
             const data = projectData[id];
 
@@ -75,9 +78,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 clone.getElementById('modal-title').textContent = data.title;
                 clone.getElementById('modal-description').textContent = data.description;
                 clone.getElementById('modal-image').src = data.image;
-                clone.querySelector(".work-button:nth-child(1)").href = data.demoLink;
+                const demoBtn = clone.querySelector(".work-button:nth-child(1)");
+                demoBtn.href = data.demoLink;
                 clone.querySelector(".work-button:nth-child(2)").href = data.sourceCode;
                 clone.getElementById("modal-text").textContent = data.text;
+
+                if (data.disabled) {
+                    demoBtn.classList.add(data.disabled);
+                }
 
                 const tagHolder = clone.querySelector(".project-tag-holder");
                 data.tags.forEach(tag => {
@@ -107,3 +115,27 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+document.querySelector('.contact-form').addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    const res = await fetch('contact_form.php', {
+        method: 'POST',
+        body: formData
+    });
+
+    const result = await res.json();
+    if (result.status === 'success') {
+        document.getElementById('success-modal').classList.remove('hidden');
+        form.reset();
+    } else {
+        alert("Error: " + result.message);
+    }
+});
+
+function closeModal() {
+    document.getElementById('success-modal').classList.add('hidden');
+}

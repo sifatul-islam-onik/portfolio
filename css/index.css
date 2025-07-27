@@ -59,8 +59,7 @@ body {
     display: none;
 }
 
-#home,
-#about {
+#home, #about {
     height: 90vh;
     display: flex;
     flex-direction: column;
@@ -69,7 +68,7 @@ body {
     position: relative;
 }
 
-#projects {
+#projects, #experience {
     height: auto;
     padding: 40px 20px;
     display: flex;
@@ -221,7 +220,7 @@ body {
     margin-top: 30px;
     animation: appear linear;
     animation-timeline: view();
-    animation-range: entry 0% cover 40%;
+    animation-range: entry 0% cover 25%;
 }
 
 
@@ -274,6 +273,11 @@ body {
     color: #D4D4D4;
     font-size: 0.9rem;
     text-transform: capitalize;
+}
+
+.highlight{
+    text-transform: capitalize;
+    font-weight: bold;
 }
 
 .project-holder {
@@ -414,6 +418,9 @@ body {
     align-items: center;
     z-index: 1000;
     overflow: auto;
+    animation: appear linear;
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
 }
 
 .modal-content {
@@ -429,13 +436,32 @@ body {
     display: block;
 }
 
+.close-wrapper {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+    background: transparent;
+    z-index: 10;
+}
+
 .close {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    cursor: pointer;
-    font-size: 4rem;
+    font-size: 3rem;
     color: white;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 8px;
+}
+
+.close:hover {
+    color: #D4D4D4;
 }
 
 .hidden {
@@ -476,7 +502,7 @@ body {
     margin-bottom: 20px;
 }
 
-#modal-arrow{
+#modal-arrow {
     margin-top: 20px;
     font-size: 3rem;
     margin-bottom: 40px;
@@ -490,42 +516,43 @@ body {
     object-fit: cover;
 }
 
-.modal-text{
+.modal-text {
     display: flex;
     width: 100%;
     flex-direction: row;
 }
 
-.modal-overview{
+.modal-overview {
     display: flex;
     flex-direction: column;
     width: 50%;
     align-items: start;
 }
 
-#project-heading{
+#project-heading {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 20px;
     text-transform: capitalize;
 }
 
-.modal-detail{
-    width:50%;
+.modal-detail {
+    width: 50%;
 }
 
-.modal-button-holder{
+.modal-button-holder {
     display: flex;
     flex-direction: row;
-    gap:20px;
+    gap: 20px;
 }
 
-#modal-text{
-    width:50%;
+#modal-text {
+    width: 50%;
     text-align: start;
     font-size: 1rem;
     color: #e4e4e4;
     line-height: 1.6rem;
+    margin-top: 20px;
 }
 
 .contact-form {
@@ -617,7 +644,7 @@ footer .links {
 }
 
 .link-category {
-    margin: 0 40px;
+    margin: 0 20px;
     text-align: start;
 }
 
@@ -654,6 +681,44 @@ footer a:hover {
 
 #footer-email-short {
     display: none;
+}
+
+.success-modal.hidden {
+  display: none;
+}
+
+.success-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.success-modal-content {
+  background-color: #D4D4D4;
+  color:black;
+  padding: 50px 30px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  max-width: 400px;
+  width: 90%;
+}
+
+.success-modal-content .success-close {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  cursor: pointer;
+  font-size: 2.5rem;
+  color: black;
+}
+
+.success-modal-content h2{
+    margin-bottom: 10px;
 }
 
 @keyframes shimmer {
@@ -758,8 +823,9 @@ footer a:hover {
 
     .work-button,
     #resume-button {
-        width: 80%;
         text-align: center;
+        font-size: 0.8rem;
+
     }
 
     .socials-holder {
@@ -831,7 +897,7 @@ footer a:hover {
     }
 
     .link-category {
-        margin: 20px;
+        margin: 0 20px;
         padding-right: 5px;
     }
 
@@ -841,6 +907,42 @@ footer a:hover {
 
     footer a {
         font-size: 0.9rem;
+    }
+
+    .modal-content {
+        width: 95%;
+        height: 90%;
+        padding: 20px;
+    }
+
+    #modal-title {
+        font-size: 2rem;
+    }
+
+    #modal-description {
+        font-size: 1.6rem;
+    }
+
+    #modal-arrow {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .modal-text {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modal-overview,
+    .modal-detail,
+    #modal-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    #modal-text {
+        font-size: 0.95rem;
+        line-height: 1.4rem;
     }
 }
 
@@ -913,12 +1015,16 @@ footer a:hover {
         justify-content: space-between;
     }
 
+    footer ul {
+        max-width: 150px;
+    }
+
     footer a {
-        font-size: 0.95rem;
+        font-size: 0.8rem;
     }
 
     .link-category {
-        margin: 15px 0;
+        margin: 0 5px;
     }
 
     #footer-email {
@@ -927,5 +1033,24 @@ footer a:hover {
 
     #footer-email-short {
         display: inline-block;
+    }
+
+    #modal-title {
+        font-size: 1.8rem;
+    }
+
+    #modal-description {
+        font-size: 1.4rem;
+    }
+
+    .close {
+        top: 5px;
+        right: 10px;
+    }
+
+    #project-heading {
+        font-size: 2rem;
+        text-align: center;
+        width: 100%;
     }
 }
