@@ -26,11 +26,9 @@ try {
         throw new Exception("Invalid email address.");
     }
 
-    // Insert into DB
     $stmt = $pdo->prepare("INSERT INTO contact_messages (name, email, message) VALUES (?, ?, ?)");
     $stmt->execute([$name, $email, $message]);
 
-    // Send email with PHPMailer
     $mail = new PHPMailer(true);
     $mail->isSMTP();
     $mail->Host = $config['smtp_host'];

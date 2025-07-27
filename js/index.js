@@ -121,18 +121,34 @@ document.querySelector('.contact-form').addEventListener('submit', async functio
 
     const form = e.target;
     const formData = new FormData(form);
+    const button = form.querySelector('button');
+    const btnText = button.querySelector('.btn-text');
+    const spinner = button.querySelector('.spinner');
 
-    const res = await fetch('contact_form.php', {
-        method: 'POST',
-        body: formData
-    });
+    button.disabled = true;
+    btnText.textContent = "";
+    spinner.classList.remove('hidden');
 
-    const result = await res.json();
-    if (result.status === 'success') {
-        document.getElementById('success-modal').classList.remove('hidden');
-        form.reset();
-    } else {
-        alert("Error: " + result.message);
+    try {
+        const res = await fetch('contact_form.php', {
+            method: 'POST',
+            body: formData
+        });
+
+        const result = await res.json();
+        if (result.status === 'success') {
+            document.getElementById('success-modal').classList.remove('hidden');
+            form.reset();
+        } else {
+            alert("Error: " + result.message);
+        }
+    } catch (err) {
+        console.error("Fetch failed:", err);
+        alert("Something went wrong. Please try again.");
+    } finally {
+        button.disabled = false;
+        btnText.textContent = "Send Message";
+        spinner.classList.add('hidden');
     }
 });
 

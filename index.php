@@ -239,7 +239,13 @@
 
     <section id="experience">
         <h2 class="heading">experience</h2>
-        <p class="about-text" style="max-width:1250px; text-align:center;">I'm a 3rd-year <span class="highlight">CSE</span> student at <span class="highlight">khulna university of engineering & technology</span> with a focus on building practical software solutions. Although I haven't held a formal job yet, I've worked on several personal and academic projects using technologies like React, Node.js, Laravel, MongoDB, and Firebase. I've also built Android and desktop applications, which have helped me develop a solid grasp of both frontend and backend development. I'm looking forward to applying these skills in real-world scenarios and continuing to improve as a developer.</p>
+        <p class="about-text" style="max-width:1250px; text-align:center;">I'm a 3rd-year <span
+                class="highlight">CSE</span> student at <span class="highlight">khulna university of engineering &
+                technology</span> with a focus on building practical software solutions. Although I haven't held a
+            formal job yet, I've worked on several personal and academic projects using technologies like React,
+            Node.js, Laravel, MongoDB, and Firebase. I've also built Android and desktop applications, which have helped
+            me develop a solid grasp of both frontend and backend development. I'm looking forward to applying these
+            skills in real-world scenarios and continuing to improve as a developer.</p>
     </section>
 
     <!-- projects -->
@@ -349,7 +355,10 @@
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
                 <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
+                <button type="submit">
+                    <span class="btn-text">Send Message</span>
+                    <span class="spinner hidden"></span>
+                </button>
             </form>
         </div>
     </section>

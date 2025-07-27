@@ -59,7 +59,8 @@ body {
     display: none;
 }
 
-#home, #about {
+#home,
+#about {
     height: 90vh;
     display: flex;
     flex-direction: column;
@@ -68,7 +69,8 @@ body {
     position: relative;
 }
 
-#projects, #experience {
+#projects,
+#experience {
     height: auto;
     padding: 40px 20px;
     display: flex;
@@ -275,7 +277,7 @@ body {
     text-transform: capitalize;
 }
 
-.highlight{
+.highlight {
     text-transform: capitalize;
     font-weight: bold;
 }
@@ -604,11 +606,38 @@ body {
     cursor: pointer;
 }
 
+.contact-form button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
 .contact-form button:hover {
     background: linear-gradient(-45deg, #2D2D2D 45%, #404040 50%, #2D2D2D 55%);
     background-size: 300%;
     background-position-x: 100%;
     animation: shimmer 1.5s infinite linear;
+}
+
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid #D4D4D4;
+    border-top: 3px solid #3B82F6;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 footer {
@@ -684,40 +713,40 @@ footer a:hover {
 }
 
 .success-modal.hidden {
-  display: none;
+    display: none;
 }
 
 .success-modal {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 
 .success-modal-content {
-  background-color: #D4D4D4;
-  color:black;
-  padding: 50px 30px;
-  border-radius: 10px;
-  text-align: center;
-  position: relative;
-  max-width: 400px;
-  width: 90%;
+    background-color: #D4D4D4;
+    color: black;
+    padding: 50px 30px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    max-width: 400px;
+    width: 90%;
 }
 
 .success-modal-content .success-close {
-  position: absolute;
-  top: 0;
-  right: 15px;
-  cursor: pointer;
-  font-size: 2.5rem;
-  color: black;
+    position: absolute;
+    top: 0;
+    right: 15px;
+    cursor: pointer;
+    font-size: 2.5rem;
+    color: black;
 }
 
-.success-modal-content h2{
+.success-modal-content h2 {
     margin-bottom: 10px;
 }
 
