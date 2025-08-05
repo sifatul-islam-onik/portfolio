@@ -17,6 +17,10 @@
 
 <body>
 
+    <div id="welcome-screen">
+        <div class="welcome-text" id="greeting"></div>
+    </div>
+
     <!-- navbar -->
     <div class="nav-bar">
         <ul>
@@ -82,7 +86,7 @@
                 are both powerful and beautifully engineered.</p>
             <div class="intro-button-holder">
                 <a href="#projects" class="work-button">see my work <i class="fa-solid fa-angle-right"></i></a>
-                <a href="#" id="resume-button"><i class="fa-solid fa-download" style="color:#3B82F6;"></i> download
+                <a href="#" id="resume-button"><i class="fa-solid fa-download" style="color:#00BFFF;"></i> download
                     resume</a>
             </div>
             <div class="socials-holder">
@@ -199,27 +203,6 @@
                 </div>
             </div>
             <div class="technology">
-                <img src="/image/logo/c++.png" alt="" class="technology-logo">
-                <div class="technology-text">
-                    <div class="technology-title">c++</div>
-                    <div class="technology-subtitle">system-level language</div>
-                </div>
-            </div>
-            <div class="technology">
-                <img src="/image/logo/chash.png" alt="" class="technology-logo">
-                <div class="technology-text">
-                    <div class="technology-title">c#</div>
-                    <div class="technology-subtitle">.net programming language</div>
-                </div>
-            </div>
-            <div class="technology">
-                <img src="/image/logo/asp.png" alt="" class="technology-logo">
-                <div class="technology-text">
-                    <div class="technology-title">asp.net</div>
-                    <div class="technology-subtitle">web app framework</div>
-                </div>
-            </div>
-            <div class="technology">
                 <img src="/image/logo/java.png" alt="" class="technology-logo">
                 <div class="technology-text">
                     <div class="technology-title">javaFX</div>
@@ -255,9 +238,9 @@
         <p class="about-text">Here are some of the projects I've worked on, showcasing my skills in web and software
             development:</p>
         <div class="project-holder">
-            <div class="project" data-id="project1">
+            <div class="project">
                 <div class="project-image-wrapper">
-                    <img src="/image/project/project1.png" alt="Project 1" class="project-image" />
+                    <img src="/image/project/project1.png" alt="Project 1" class="project-image" data-id="project1" />
                 </div>
                 <div class="project-info">
                     <h3 class="project-title">BookLog</h3>
@@ -277,9 +260,9 @@
                     </div>
                 </div>
             </div>
-            <div class="project" data-id="project4">
+            <div class="project">
                 <div class="project-image-wrapper">
-                    <img src="/image/project/project4.png" alt="Project 4" class="project-image" />
+                    <img src="/image/project/project4.png" alt="Project 4" class="project-image" data-id="project4" />
                 </div>
                 <div class="project-info">
                     <h3 class="project-title">LostLink</h3>
@@ -300,9 +283,9 @@
                     </div>
                 </div>
             </div>
-            <div class="project" data-id="project2">
+            <div class="project">
                 <div class="project-image-wrapper">
-                    <img src="/image/project/project2.png" alt="Project 2" class="project-image" />
+                    <img src="/image/project/project2.png" alt="Project 2" class="project-image" data-id="project2" />
                 </div>
                 <div class="project-info">
                     <h3 class="project-title">ChatterBox</h3>
@@ -320,9 +303,9 @@
                     </div>
                 </div>
             </div>
-            <div class="project" data-id="project3">
+            <div class="project">
                 <div class="project-image-wrapper">
-                    <img src="/image/project/project3.png" alt="Project 3" class="project-image" />
+                    <img src="/image/project/project3.png" alt="Project 3" class="project-image" data-id="project3" />
                 </div>
                 <div class="project-info">
                     <h3 class="project-title">Store Management System</h3>

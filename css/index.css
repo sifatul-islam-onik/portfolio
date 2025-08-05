@@ -6,14 +6,12 @@
 
 html,
 body {
-    /* height: 100%;
-    width: 100%; */
     scroll-behavior: smooth;
     font-family: "Raleway", sans-serif;
 }
 
 body {
-    background-image: url('/image/background.png');
+    background-image: url('/image/89781.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -22,12 +20,39 @@ body {
     padding-top: 40px;
 }
 
+#welcome-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    z-index: 9999;
+    overflow: hidden;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+#welcome-screen.hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+body.loaded #main-content {
+    display: block;
+}
+
 .nav-bar {
     position: sticky;
     top: 0;
     margin: 0 auto;
     width: fit-content;
-    background-color: #1A1A1A;
+    background-color: #121212;
     padding: 20px 30px;
     border-radius: 10px;
     z-index: 999;
@@ -48,7 +73,7 @@ body {
 }
 
 .nav-bar a:hover {
-    color: #D4D4D4;
+    color: #E0E0E0;
 }
 
 .nav-text {
@@ -107,15 +132,20 @@ body {
     text-transform: capitalize;
     font-size: 4rem;
     font-weight: 700;
-    animation: blur 0.7s linear both;
+    opacity: 0;
+}
+
+#intro-heading.animate-blur {
+    animation: blur 0.7s linear forwards;
+    opacity: 1;
 }
 
 #intro-heading span {
-    color: #3B82F6;
+    color: #00BFFF;
 }
 
 #intro-subheading {
-    color: #D4D4D4;
+    color: #E0E0E0;
     font-size: 1.2rem;
     font-weight: 500;
     margin-top: 20px;
@@ -146,6 +176,7 @@ body {
     background-size: 300%;
     background-position-x: 100%;
     animation: shimmer 1.5s infinite linear;
+    border: 1px solid black;
 }
 
 #resume-button {
@@ -160,7 +191,7 @@ body {
 }
 
 #resume-button:hover {
-    color: #D4D4D4;
+    color: #E0E0E0;
 }
 
 .socials-holder {
@@ -206,7 +237,7 @@ body {
 
 .about-text {
     font-size: 1.1rem;
-    color: #D4D4D4;
+    color: #E0E0E0;
     line-height: 1.6;
     padding: 0 50px;
     animation: left linear;
@@ -244,6 +275,7 @@ body {
     animation: shimmer 1.5s infinite linear;
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    border: 1px solid black;
 }
 
 .technology-logo {
@@ -272,7 +304,7 @@ body {
 }
 
 .technology-subtitle {
-    color: #D4D4D4;
+    color: #E0E0E0;
     font-size: 0.9rem;
     text-transform: capitalize;
 }
@@ -371,7 +403,7 @@ body {
 
 .project-tag {
     background-color: #2D2D2D;
-    color: #D4D4D4;
+    color: #E0E0E0;
     padding: 10px 15px;
     border-radius: 5px;
     font-size: 0.9rem;
@@ -443,6 +475,7 @@ body {
     top: 0;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     background: transparent;
     z-index: 10;
 }
@@ -458,12 +491,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0;
+    padding-bottom: 5px;
     margin: 8px;
 }
 
 .close:hover {
-    color: #D4D4D4;
+    color: #E0E0E0;
 }
 
 .hidden {
@@ -498,7 +531,7 @@ body {
 
 #modal-description {
     font-size: 2.8rem;
-    color: #D4D4D4;
+    color: #E0E0E0;
     line-height: 1.6;
     text-transform: uppercase;
     margin-bottom: 20px;
@@ -617,12 +650,13 @@ body {
     background-size: 300%;
     background-position-x: 100%;
     animation: shimmer 1.5s infinite linear;
+    border: 1px solid black;
 }
 
 .spinner {
     width: 20px;
     height: 20px;
-    border: 3px solid #D4D4D4;
+    border: 3px solid #E0E0E0;
     border-top: 3px solid #3B82F6;
     border-radius: 50%;
     animation: spin 1s linear infinite;
@@ -650,6 +684,7 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    background-color: #121212;
 }
 
 
@@ -663,7 +698,7 @@ footer {
 
 .copyright .subtitle {
     font-size: 1rem;
-    color: #D4D4D4;
+    color: #E0E0E0;
 }
 
 footer .links {
@@ -727,7 +762,7 @@ footer a:hover {
 }
 
 .success-modal-content {
-    background-color: #D4D4D4;
+    background-color: #E0E0E0;
     color: black;
     padding: 50px 30px;
     border-radius: 10px;

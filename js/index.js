@@ -1,3 +1,33 @@
+const greetings = [
+    "Welcome", "Bienvenido", "Bonjour", "Willkommen", "স্বাগতম",
+    "ようこそ", "欢迎", "환영합니다", "Добро пожаловать", "أهلا بك"
+];
+
+let index = 0;
+const greetingEl = document.getElementById('greeting');
+const welcomeScreen = document.getElementById('welcome-screen');
+const introHeading = document.getElementById('intro-heading');
+
+const delayPerGreeting = 300;
+const totalDuration = greetings.length * delayPerGreeting;
+
+const interval = setInterval(() => {
+    greetingEl.textContent = greetings[index];
+    index++;
+
+    if (index >= greetings.length) {
+        clearInterval(interval);
+
+        setTimeout(() => {
+            welcomeScreen.classList.add('hidden');
+            document.body.classList.add('loaded');
+
+            introHeading.classList.add('animate-blur');
+        }, delayPerGreeting);
+    }
+}, delayPerGreeting);
+
+
 const emailLink = document.getElementById('copy-email');
 const status = document.getElementById('copy-status');
 const email = "sifatul.islam.onik@gmail.com";
@@ -67,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const template = document.getElementById('project-template');
     const closeModalBtn = document.getElementById('modal-close');
 
-    document.querySelectorAll('.project, .project-modal-link').forEach(project => {
+    document.querySelectorAll('.project-image, .project-modal-link').forEach(project => {
         project.addEventListener('click', (e) => {
             e.preventDefault();
             const id = project.getAttribute('data-id');
