@@ -86,7 +86,7 @@
                 are both powerful and beautifully engineered.</p>
             <div class="intro-button-holder">
                 <a href="#projects" class="work-button">see my work <i class="fa-solid fa-angle-right"></i></a>
-                <a href="#" id="resume-button"><i class="fa-solid fa-download" style="color:#00BFFF;"></i> download
+                <a href="#" id="resume-button"><i class="fa-solid fa-download" style="color:#00ffd5;"></i> download
                     resume</a>
             </div>
             <div class="socials-holder">
@@ -110,7 +110,7 @@
         <h2 class="heading">current technologies</h2>
         <p class="about-text">I'm skilled in a variety of modern technologies that enable me to craft robust,
             high-performance solutions. Here are some of the core tools and frameworks I work with:</p>
-        <div class="technologies-holder">
+        <!-- <div class="technologies-holder">
             <div class="technology">
                 <img src="/image/logo/html.png" alt="" class="technology-logo">
                 <div class="technology-text">
@@ -216,7 +216,119 @@
                     <div class="technology-subtitle">mobile app framework</div>
                 </div>
             </div>
+        </div> -->
+
+        <div class="tech-holder">
+            <div class="tech-frontend">
+                <h3 class="tech-category-title">Frontend</h3>
+                <div class="technology">
+                    <img src="/image/logo/html.png" alt="" class="technology-logo">
+                    <div class="technology-text">
+                        <div class="technology-title">html</div>
+                        <div class="technology-subtitle">web structure</div>
+                    </div>
+                </div>
+                <div class="technology">
+                    <img src="/image/logo/css.png" alt="" class="technology-logo">
+                    <div class="technology-text">
+                        <div class="technology-title">CSS</div>
+                        <div class="technology-subtitle">web styling</div>
+                    </div>
+                </div>
+                <div class="technology">
+                    <img src="/image/logo/js.png" alt="" class="technology-logo">
+                    <div class="technology-text">
+                        <div class="technology-title">javaScript</div>
+                        <div class="technology-subtitle">web interactivity</div>
+                    </div>
+                </div>
+                <div class="technology">
+                    <img src="/image/logo/bootstrap.png" alt="" class="technology-logo">
+                    <div class="technology-text">
+                        <div class="technology-title">bootstrap</div>
+                        <div class="technology-subtitle">ui styling toolkit</div>
+                    </div>
+                </div>
+                <div class="technology">
+                    <img src="/image/logo/react.png" alt="" class="technology-logo">
+                    <div class="technology-text">
+                        <div class="technology-title">react</div>
+                        <div class="technology-subtitle">ui component library</div>
+                    </div>
+                </div>
+                <div class="technology">
+                    <img src="/image/logo/java.png" alt="" class="technology-logo">
+                    <div class="technology-text">
+                        <div class="technology-title">javaFX</div>
+                        <div class="technology-subtitle">java ui toolkit</div>
+                    </div>
+                </div>
+                <div class="technology">
+                    <img src="/image/logo/android.png" alt="" class="technology-logo">
+                    <div class="technology-text">
+                        <div class="technology-title">android</div>
+                        <div class="technology-subtitle">mobile app framework</div>
+                    </div>
+                </div>
+            </div>
+            <div class="tech-backend">
+                <h3 class="tech-category-title">Backend</h3>
+                <div class="technology">
+                    <img src="/image/logo/php.png" alt="" class="technology-logo">
+                    <div class="technology-text">
+                        <div class="technology-title">pHP</div>
+                        <div class="technology-subtitle">server-side scripting</div>
+                    </div>
+                </div>
+                <div class="technology">
+                    <img src="/image/logo/laravel.png" alt="" class="technology-logo">
+                    <div class="technology-text">
+                        <div class="technology-title">laravel</div>
+                        <div class="technology-subtitle">php web framework</div>
+                    </div>
+                </div>
+                <div class="technology">
+                    <img src="/image/logo/express.png" alt="" class="technology-logo">
+                    <div class="technology-text">
+                        <div class="technology-title">express</div>
+                        <div class="technology-subtitle">node.js web framework</div>
+                    </div>
+                </div>
+                <div class="technology">
+                    <img src="/image/logo/nodejs.png" alt="" class="technology-logo">
+                    <div class="technology-text">
+                        <div class="technology-title">nodeJs</div>
+                        <div class="technology-subtitle">js runtime backend</div>
+                    </div>
+                </div>
+            </div>
+            <div class="tech-database">
+                <h3 class="tech-category-title">Database</h3>
+                <div class="technology">
+                    <img src="/image/logo/mysql.png" alt="" class="technology-logo">
+                    <div class="technology-text">
+                        <div class="technology-title">mySql</div>
+                        <div class="technology-subtitle">relational database</div>
+                    </div>
+                </div>
+                <div class="technology">
+                    <img src="/image/logo/mongodb.png" alt="" class="technology-logo">
+                    <div class="technology-text">
+                        <div class="technology-title">mongoDB</div>
+                        <div class="technology-subtitle">nosql database</div>
+                    </div>
+                </div>
+                <div class="technology">
+                    <img src="/image/logo/firebase.png" alt="" class="technology-logo">
+                    <div class="technology-text">
+                        <div class="technology-title">firebase</div>
+                        <div class="technology-subtitle">realtime database</div>
+                    </div>
+                </div>
+            </div>
         </div>
+
+
 
     </section>
 
