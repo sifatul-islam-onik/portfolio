@@ -7,17 +7,10 @@ use PHPMailer\PHPMailer\Exception;
 require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
 require 'PHPMailer/src/Exception.php';
-
-$config = require 'config.php';
+require 'db.php';
 
 try {
-    $pdo = new PDO(
-        "mysql:host={$config['db_host']};dbname={$config['db_name']}",
-        $config['db_user'],
-        $config['db_pass'],
-        [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
-    );
-
+    
     $name = htmlspecialchars($_POST['name'] ?? '');
     $email = filter_var($_POST['email'] ?? '', FILTER_VALIDATE_EMAIL);
     $message = htmlspecialchars($_POST['message'] ?? '');

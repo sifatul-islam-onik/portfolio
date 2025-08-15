@@ -67,8 +67,8 @@
                     <p id="project-heading">project overview</p>
                     <div class="project-tag-holder" style="margin-bottom:30px;"></div>
                     <div class="modal-button-holder">
-                        <a href="#" class="work-button"><i class="fa-solid fa-globe"></i> view demo</a>
-                        <a href="#" class="work-button"><i class="fa-solid fa-code"></i> source code</a>
+                        <a href="#" class="work-button" id="modal-demo" target="_blank"><i class="fa-solid fa-globe"></i> view demo</a>
+                        <a href="#" class="work-button" id="modal-github" target="_blank"><i class="fa-solid fa-code"></i> source code</a>
                     </div>
                 </div>
                 <p id="modal-text"></p>
@@ -110,113 +110,6 @@
         <h2 class="heading">current technologies</h2>
         <p class="about-text">I'm skilled in a variety of modern technologies that enable me to craft robust,
             high-performance solutions. Here are some of the core tools and frameworks I work with:</p>
-        <!-- <div class="technologies-holder">
-            <div class="technology">
-                <img src="/image/logo/html.png" alt="" class="technology-logo">
-                <div class="technology-text">
-                    <div class="technology-title">html</div>
-                    <div class="technology-subtitle">web structure</div>
-                </div>
-            </div>
-            <div class="technology">
-                <img src="/image/logo/css.png" alt="" class="technology-logo">
-                <div class="technology-text">
-                    <div class="technology-title">CSS</div>
-                    <div class="technology-subtitle">web styling</div>
-                </div>
-            </div>
-            <div class="technology">
-                <img src="/image/logo/js.png" alt="" class="technology-logo">
-                <div class="technology-text">
-                    <div class="technology-title">javaScript</div>
-                    <div class="technology-subtitle">web interactivity</div>
-                </div>
-            </div>
-            <div class="technology">
-                <img src="/image/logo/bootstrap.png" alt="" class="technology-logo">
-                <div class="technology-text">
-                    <div class="technology-title">bootstrap</div>
-                    <div class="technology-subtitle">ui styling toolkit</div>
-                </div>
-            </div>
-            <div class="technology">
-                <img src="/image/logo/php.png" alt="" class="technology-logo">
-                <div class="technology-text">
-                    <div class="technology-title">pHP</div>
-                    <div class="technology-subtitle">server-side scripting</div>
-                </div>
-            </div>
-            <div class="technology">
-                <img src="/image/logo/laravel.png" alt="" class="technology-logo">
-                <div class="technology-text">
-                    <div class="technology-title">laravel</div>
-                    <div class="technology-subtitle">php web framework</div>
-                </div>
-            </div>
-            <div class="technology">
-                <img src="/image/logo/mysql.png" alt="" class="technology-logo">
-                <div class="technology-text">
-                    <div class="technology-title">mySql</div>
-                    <div class="technology-subtitle">relational database</div>
-                </div>
-            </div>
-            <div class="technology">
-                <img src="/image/logo/nodejs.png" alt="" class="technology-logo">
-                <div class="technology-text">
-                    <div class="technology-title">nodeJs</div>
-                    <div class="technology-subtitle">js runtime backend</div>
-                </div>
-            </div>
-            <div class="technology">
-                <img src="/image/logo/react.png" alt="" class="technology-logo">
-                <div class="technology-text">
-                    <div class="technology-title">react</div>
-                    <div class="technology-subtitle">ui component library</div>
-                </div>
-            </div>
-            <div class="technology">
-                <img src="/image/logo/express.png" alt="" class="technology-logo">
-                <div class="technology-text">
-                    <div class="technology-title">express</div>
-                    <div class="technology-subtitle">node.js web framework</div>
-                </div>
-            </div>
-            <div class="technology">
-                <img src="/image/logo/mongodb.png" alt="" class="technology-logo">
-                <div class="technology-text">
-                    <div class="technology-title">mongoDB</div>
-                    <div class="technology-subtitle">nosql database</div>
-                </div>
-            </div>
-            <div class="technology">
-                <img src="/image/logo/git.png" alt="" class="technology-logo">
-                <div class="technology-text">
-                    <div class="technology-title">git</div>
-                    <div class="technology-subtitle">version control</div>
-                </div>
-            </div>
-            <div class="technology">
-                <img src="/image/logo/firebase.png" alt="" class="technology-logo">
-                <div class="technology-text">
-                    <div class="technology-title">firebase</div>
-                    <div class="technology-subtitle">realtime database</div>
-                </div>
-            </div>
-            <div class="technology">
-                <img src="/image/logo/java.png" alt="" class="technology-logo">
-                <div class="technology-text">
-                    <div class="technology-title">javaFX</div>
-                    <div class="technology-subtitle">java ui toolkit</div>
-                </div>
-            </div>
-            <div class="technology">
-                <img src="/image/logo/android.png" alt="" class="technology-logo">
-                <div class="technology-text">
-                    <div class="technology-title">android</div>
-                    <div class="technology-subtitle">mobile app framework</div>
-                </div>
-            </div>
-        </div> -->
 
         <div class="tech-holder">
             <div class="tech-frontend">
@@ -349,92 +242,58 @@
         <h2 class="heading">my portfolio</h2>
         <p class="about-text">Here are some of the projects I've worked on, showcasing my skills in web and software
             development:</p>
-        <div class="project-holder">
-            <div class="project">
-                <div class="project-image-wrapper">
-                    <img src="/image/project/project1.png" alt="Project 1" class="project-image" data-id="project1" />
-                </div>
-                <div class="project-info">
-                    <h3 class="project-title">BookLog</h3>
-                    <div class="project-tag-holder">
-                        <span class="project-tag">React</span>
-                        <span class="project-tag">Express</span>
-                        <span class="project-tag">MongoDB</span>
-                        <span class="project-tag">Node.js</span>
-                        <span class="project-tag">CSS</span>
-                        <span class="project-tag">Bootstrap</span>
-                    </div>
-                    <div class="project-link-holder">
-                        <a href="https://github.com/sifatul-islam-onik/bookLog" class="project-link"><i
-                                class="fa-solid fa-code"></i></a>
-                        <a href="https://booklog-07k6.onrender.com/" class="project-link"><i
-                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="project">
-                <div class="project-image-wrapper">
-                    <img src="/image/project/project4.png" alt="Project 4" class="project-image" data-id="project4" />
-                </div>
-                <div class="project-info">
-                    <h3 class="project-title">LostLink</h3>
-                    <div class="project-tag-holder">
-                        <span class="project-tag">Laravel</span>
-                        <span class="project-tag">PHP</span>
-                        <span class="project-tag">HTML</span>
-                        <span class="project-tag">CSS</span>
-                        <span class="project-tag">JavaScript</span>
-                        <span class="project-tag">MySQL</span>
 
+        <?php
+        require 'db.php';
+
+        $stmt = $pdo->query("SELECT * FROM projects ORDER BY created_at ASC");
+        $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        ?>
+
+        <script>
+            const projectData = <?php echo json_encode($projects, JSON_UNESCAPED_SLASHES); ?>;
+        </script>
+
+        <div class="project-holder">
+            <?php if ($projects): ?>
+                <?php foreach ($projects as $project): ?>
+                    <div class="project">
+                        <div class="project-image-wrapper">
+                            <img src="<?php echo htmlspecialchars($project['image']); ?>"
+                                alt="<?php echo htmlspecialchars($project['title']); ?>" class="project-image"
+                                data-id="<?php echo $project['id']; ?>" />
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title"><?php echo htmlspecialchars($project['title']); ?></h3>
+                            <div class="project-tag-holder">
+                                <?php
+                                $tags = explode(',', $project['tags']);
+                                foreach ($tags as $tag): ?>
+                                    <span class="project-tag"><?php echo htmlspecialchars(trim($tag)); ?></span>
+                                <?php endforeach; ?>
+                            </div>
+
+                            <div class="project-link-holder">
+                                <?php if (!empty($project['github'])): ?>
+                                    <a href="<?php echo htmlspecialchars($project['github']); ?>" class="project-link"
+                                        target="_blank">
+                                        <i class="fa-solid fa-code"></i>
+                                    </a>
+                                <?php endif; ?>
+
+                                <?php if (!empty($project['demo'])): ?>
+                                    <a href="<?php echo htmlspecialchars($project['demo']); ?>" class="project-link"
+                                        target="_blank">
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    </a>
+                                <?php endif; ?>
+                            </div>
+                        </div>
                     </div>
-                    <div class="project-link-holder">
-                        <a href="https://github.com/sifatul-islam-onik/Lost-and-Found" class="project-link"><i
-                                class="fa-solid fa-code"></i></a>
-                        <a href="https://lostlink.great-site.net/" class="project-link"><i
-                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="project">
-                <div class="project-image-wrapper">
-                    <img src="/image/project/project2.png" alt="Project 2" class="project-image" data-id="project2" />
-                </div>
-                <div class="project-info">
-                    <h3 class="project-title">ChatterBox</h3>
-                    <div class="project-tag-holder">
-                        <span class="project-tag">Android</span>
-                        <span class="project-tag">Java</span>
-                        <span class="project-tag">XML</span>
-                        <span class="project-tag">Firebase</span>
-                    </div>
-                    <div class="project-link-holder">
-                        <a href="https://github.com/sifatul-islam-onik/Online-Chatting-App" class="project-link"><i
-                                class="fa-solid fa-code"></i></a>
-                        <a href="#" class="project-link disabled-project"><i
-                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="project">
-                <div class="project-image-wrapper">
-                    <img src="/image/project/project3.png" alt="Project 3" class="project-image" data-id="project3" />
-                </div>
-                <div class="project-info">
-                    <h3 class="project-title">Store Management System</h3>
-                    <div class="project-tag-holder">
-                        <span class="project-tag">Desktop Application</span>
-                        <span class="project-tag">JavaFx</span>
-                        <span class="project-tag">FXML</span>
-                        <span class="project-tag">MySQL</span>
-                    </div>
-                    <div class="project-link-holder">
-                        <a href="https://github.com/sifatul-islam-onik/Store-Management-System" class="project-link"><i
-                                class="fa-solid fa-code"></i></a>
-                        <a href="#" class="project-link disabled-project"><i
-                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-            </div>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <p>No projects available yet.</p>
+            <?php endif; ?>
         </div>
 
     </section>
@@ -461,8 +320,13 @@
     <!-- footer -->
     <footer>
         <div class="copyright">
-            <p class="title">md sifatul islam</p>
-            <p class="subtitle">&copy; <?php echo date('Y') ?> | All rights reserved.</p>
+            <a href="/login.php" class="admin-button">
+                <i class="fa-solid fa-user-lock"></i>
+            </a>
+            <div>
+                <p class="title">md sifatul islam</p>
+                <p class="subtitle">&copy; <?php echo date('Y') ?> | All rights reserved.</p>
+            </div>
         </div>
         <div class="links">
             <div class="link-category">
@@ -472,15 +336,6 @@
                     <li><a href="#about">about</a></li>
                     <li><a href="#projects">projects</a></li>
                     <li><a href="#contact">contact</a></li>
-                </ul>
-            </div>
-            <div class="link-category">
-                <h3 class="category-title">projects</h3>
-                <ul>
-                    <li><a href="#" class="project-modal-link" data-id="project1">BookLog</a></li>
-                    <li><a href="#" class="project-modal-link" data-id="project4">LostLink</a></li>
-                    <li><a href="#" class="project-modal-link" data-id="project2">Chatterbox</a></li>
-                    <li><a href="#" class="project-modal-link" data-id="project3">Store Management System</a></li>
                 </ul>
             </div>
             <div class="link-category">

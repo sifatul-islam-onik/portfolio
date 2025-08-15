@@ -1,0 +1,387 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+    font-family: "Raleway", sans-serif;
+}
+
+body {
+    background-image: url('/image/89781.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;   
+}
+
+.login {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+}
+
+.login-heading {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-align: center;
+    width: fit-content;
+}
+
+input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+    background-color: #E0E0E0;
+    box-sizing: border-box;
+}
+
+.login-button {
+    background-color: #E0E0E0;
+    color: #121212;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.dashboard {
+    display: flex;
+    height: 100vh;
+}
+
+.dashboard-nav {
+    width: 250px;
+    background-color: rgba(18, 18, 18, 0.8);
+    color: white;
+    padding: 80px 20px 20px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out;
+}
+
+.dashboard-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: white;
+    text-align: center;
+}
+
+.nav-item {
+    padding: 20px;
+    margin-bottom: 10px;
+    background-color: rgba(30, 30, 30, 0.8);
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.nav-item:hover {
+    background-color: rgba(51, 51, 51, 0.8);
+}
+
+.nav-item.active {
+    background-color: rgba(76, 175, 80, 0.8);
+}
+
+.dashboard-content {
+    flex: 1;
+    padding: 20px;
+    background-color: rgba(224, 224, 224, 0.8);
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.hamburger {
+    display: none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background: rgba(18, 18, 18, 0.8);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1001;
+    border-radius: 5px;
+}
+
+.delete-projects-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.delete-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.delete-message.success {
+    color: green;
+    margin-bottom: 15px;
+}
+
+.no-projects {
+    font-size: 1.1rem;
+    color: #777;
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 250px;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.project-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.project-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: black;
+    text-transform: uppercase;
+}
+
+.delete-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.delete-button:hover {
+    background-color: darkred;
+}
+
+.delete-form {
+    margin-top: auto;
+}
+
+.section-title {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: black;
+}
+
+.messages-list {
+    list-style: none;
+    padding: 0;
+}
+
+.message-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.message-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.message-header {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.message-name {
+    color: #2980b9;
+    font-weight: bold;
+}
+
+.message-email {
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.message-body {
+    margin: 8px 0;
+    color: #444;
+}
+
+.message-date {
+    color: #777;
+    font-size: 0.8rem;
+}
+
+.no-messages {
+    font-style: italic;
+    color: #777;
+}
+
+.project-form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.form-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #34495e;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    text-align: start;
+    font-size: 1rem;
+    color: black;
+}
+
+.form-input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52,152,219,0.15);
+}
+ 
+.btn-submit {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-submit:hover {
+    background: linear-gradient(135deg, #2980b9, #2471a3);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .dashboard-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        transform: translateX(-100%);
+    }
+
+    .dashboard-nav.open {
+        transform: translateX(0);
+    }
+
+    .dashboard-content {
+        padding-top: 60px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .project-list {
+        justify-content: center;
+    }
+
+    .project-card {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .delete-title {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-heading {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    input,
+    .login-button {
+        font-size: 1rem;
+        padding: 8px;
+    }
+
+    .login-button {
+        max-width: 100%;
+    }
+    
+    .delete-projects-container {
+        padding: 10px;
+    }
+
+    .project-card {
+        padding: 8px;
+    }
+
+    .project-title {
+        font-size: 1rem;
+    }
+
+    .delete-button {
+        padding: 6px 10px;
+        font-size: 0.9rem;
+    }
+}
