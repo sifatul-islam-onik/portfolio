@@ -44,8 +44,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } else {
         echo "Error: Failed to save project.";
     }
-} else {
-    echo "Invalid request.";
 }
 ?>
 

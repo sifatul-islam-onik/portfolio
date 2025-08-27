@@ -63,6 +63,31 @@ document.getElementById('dashboard-content').addEventListener('submit', async fu
     }
 });
 
+document.addEventListener("click", function(e) {
+    if (e.target.closest(".delete-message-button")) {
+        const btn = e.target.closest(".delete-message-button");
+        const messageId = btn.getAttribute("data-id");
+
+        if (confirm("Delete this message?")) {
+            fetch("pages/delete-message.php", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: "id=" + encodeURIComponent(messageId)
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) {
+                    document.getElementById("message-" + messageId).remove();
+                } else {
+                    alert("Failed to delete message.");
+                }
+            })
+            .catch(() => alert("Error deleting message."));
+        }
+    }
+});
+
+
 
 
 loadPage('messages');

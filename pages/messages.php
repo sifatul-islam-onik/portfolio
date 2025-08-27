@@ -9,13 +9,16 @@ $messages = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <?php if ($messages): ?>
     <ul class="messages-list">
         <?php foreach ($messages as $msg): ?>
-            <li class="message-card">
+            <li class="message-card" id="message-<?php echo $msg['id']; ?>">
                 <div class="message-header">
                     <strong class="message-name"><?php echo htmlspecialchars($msg['name']); ?></strong>
                     <span class="message-email">(<?php echo htmlspecialchars($msg['email']); ?>)</span>
                 </div>
                 <p class="message-body"><?php echo nl2br(htmlspecialchars($msg['message'])); ?></p>
                 <small class="message-date"><?php echo $msg['created_at']; ?></small>
+                <button class="delete-message-button" data-id="<?php echo $msg['id']; ?>">
+                    <i class="fa-solid fa-trash"></i>
+                </button>
             </li>
         <?php endforeach; ?>
     </ul>

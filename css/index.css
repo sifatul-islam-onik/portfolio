@@ -188,7 +188,7 @@ body.loaded #main-content {
     animation: shimmer 1.5s infinite linear;
     color: white;
     padding: 15px 20px;
-    border: none;
+    border: 1px #00ffd5 solid;
     border-radius: 5px;
     font-size: 1.1rem;
     cursor: pointer;
@@ -197,11 +197,9 @@ body.loaded #main-content {
 }
 
 .work-button:hover {
-    background: linear-gradient(-45deg, #2A2A2A 45%, #404040 50%, #2A2A2A 55%);
-    background-size: 300%;
-    background-position-x: 100%;
-    animation: shimmer 1.5s infinite linear;
-    border: 1px solid black;
+    color: #00ffd5;
+    box-shadow: 0 0 10px #00ffd5, 0 0 20px #00ffd5;
+    transition: box-shadow 0.1s ease;
 }
 
 #resume-button {
@@ -216,7 +214,7 @@ body.loaded #main-content {
 }
 
 #resume-button:hover {
-    color: #E0E0E0;
+    color: #00ffd5;
 }
 
 .socials-holder {
@@ -233,6 +231,7 @@ body.loaded #main-content {
 
 .socials-icon:hover {
     transform: translateY(-5px);
+    color: #00ffd5;
 }
 
 #copy-status {
@@ -694,6 +693,7 @@ body.loaded #main-content {
     color: white;
     font-size: 1rem;
     resize: vertical;
+    min-height: 100px;
 }
 
 .contact-form textarea:focus {

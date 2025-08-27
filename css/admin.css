@@ -220,12 +220,15 @@ body {
 }
 
 .message-card {
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 12px;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
 }
 
 .message-card:hover {
@@ -261,6 +264,27 @@ body {
 .no-messages {
     font-style: italic;
     color: #777;
+}
+
+.delete-message-form {
+    margin-top: 10px;
+    text-align: right;
+}
+
+.delete-message-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-message-button:hover {
+    background-color: darkred;
 }
 
 .project-form {
