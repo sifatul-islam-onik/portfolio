@@ -1,6 +1,7 @@
 const navItems = document.querySelectorAll('.nav-item');
 const content = document.getElementById('dashboard-content');
 const hamburger = document.getElementById('hamburger');
+const hamburgerIcon = hamburger.querySelector('i'); // select the icon
 const nav = document.getElementById('dashboard-nav');
 
 function loadPage(page) {
@@ -19,6 +20,7 @@ navItems.forEach(item => {
         navItems.forEach(i => i.classList.remove('active'));
         item.classList.add('active');
         loadPage(item.getAttribute('data-page'));
+
         if (window.innerWidth <= 768) {
             nav.classList.remove('open');
             hamburgerIcon.classList.replace('fa-times', 'fa-bars');
@@ -34,6 +36,7 @@ hamburger.addEventListener('click', () => {
         hamburgerIcon.classList.replace('fa-times', 'fa-bars');
     }
 });
+
 
 document.getElementById('dashboard-content').addEventListener('submit', async function (e) {
     if (!e.target.classList.contains('delete-form')) return;

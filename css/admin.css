@@ -86,6 +86,7 @@ body {
     padding: 80px 20px 20px;
     box-sizing: border-box;
     transition: transform 0.3s ease-in-out;
+    z-index: 1000;
 }
 
 .dashboard-title {
@@ -342,6 +343,7 @@ body {
     }
 
     .dashboard-nav {
+        background-color: #121212;
         position: fixed;
         top: 0;
         left: 0;

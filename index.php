@@ -21,6 +21,10 @@
         <div class="welcome-text" id="greeting"></div>
     </div>
 
+    <div class="floating-sticker">
+        <img src="/image/sticker.png" alt="Among Us Sticker">
+    </div>
+
     <!-- navbar -->
     <div class="nav-bar">
         <ul>
@@ -67,8 +71,10 @@
                     <p id="project-heading">project overview</p>
                     <div class="project-tag-holder" style="margin-bottom:30px;"></div>
                     <div class="modal-button-holder">
-                        <a href="#" class="work-button" id="modal-demo" target="_blank"><i class="fa-solid fa-globe"></i> view demo</a>
-                        <a href="#" class="work-button" id="modal-github" target="_blank"><i class="fa-solid fa-code"></i> source code</a>
+                        <a href="#" class="work-button" id="modal-demo" target="_blank"><i
+                                class="fa-solid fa-globe"></i> view demo</a>
+                        <a href="#" class="work-button" id="modal-github" target="_blank"><i
+                                class="fa-solid fa-code"></i> source code</a>
                     </div>
                 </div>
                 <p id="modal-text"></p>
@@ -81,12 +87,13 @@
     <section id="home">
         <div class="intro">
             <p id="location">based in bangladesh</p>
+            <img class="intro-image" src="image/developer.jpg" alt="">
             <p id="intro-heading">quality <span>software & web development</span> synergy</p>
             <p id="intro-subheading">Hi, I'm Sifat. I craft smart software solutions and dynamic web experiences that
                 are both powerful and beautifully engineered.</p>
             <div class="intro-button-holder">
                 <a href="#projects" class="work-button">see my work <i class="fa-solid fa-angle-right"></i></a>
-                <a href="#" id="resume-button"><i class="fa-solid fa-download" style="color:#00ffd5;"></i> download
+                <a href="files/resume-sample.pdf" id="resume-button" download><i class="fa-solid fa-download" style="color:#00ffd5;"></i> download
                     resume</a>
             </div>
             <div class="socials-holder">

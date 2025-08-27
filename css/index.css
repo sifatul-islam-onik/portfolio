@@ -11,7 +11,7 @@ body {
 }
 
 body {
-    background-image: url('/image/89781.jpg');
+    background-image: url('/image/background.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -47,12 +47,58 @@ body.loaded #main-content {
     display: block;
 }
 
+.floating-sticker {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.floating-sticker img {
+    position: absolute;
+    width: 50px;
+    opacity: 0.6;
+    animation: floatAround 30s linear infinite;
+}
+
+@keyframes floatAround {
+    0% {
+        top: 0%;
+        left: 0%;
+        transform: rotate(0deg);
+    }
+    25% {
+        top: 20%;
+        left: 80%;
+        transform: rotate(90deg);
+    }
+    50% {
+        top: 50%;
+        left: 50%;
+        transform: rotate(180deg);
+    }
+    75% {
+        top: 80%;
+        left: 20%;
+        transform: rotate(270deg);
+    }
+    100% {
+        top: 0%;
+        left: 0%;
+        transform: rotate(360deg);
+    }
+}
+
+
 .nav-bar {
     position: sticky;
     top: 0;
     margin: 0 auto;
     width: fit-content;
-    background-color: #121212;
+    background-color: #1A1A1A;
     padding: 20px 30px;
     border-radius: 10px;
     z-index: 999;
@@ -102,7 +148,7 @@ body.loaded #main-content {
 .admin-button:hover {
     transform: scale(1.1);
     background-color: #00ffd5;
-    color:black;
+    color: black;
 }
 
 #home {
@@ -169,12 +215,21 @@ body.loaded #main-content {
     color: #00ffd5;
 }
 
+.intro-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #00ffd5;
+    margin-top: 10px;
+}
+
 #intro-subheading {
     color: #E0E0E0;
     font-size: 1.2rem;
     font-weight: 500;
     margin-top: 20px;
-    padding: 0 50px;
+    line-height: 1.6;
 }
 
 .intro-button-holder {
@@ -682,7 +737,7 @@ body.loaded #main-content {
 
 .contact-form input:focus {
     outline: none;
-    border-color: #3B82F6;
+    border-color: #00ffd5;
 }
 
 .contact-form textarea {
@@ -698,14 +753,17 @@ body.loaded #main-content {
 
 .contact-form textarea:focus {
     outline: none;
-    border-color: #3B82F6;
+    border-color: #00ffd5;
 }
 
 .contact-form button {
-    background-color: #1A1A1A;
+    background: linear-gradient(-45deg, #1A1A1A 45%, #2A2A2A 50%, #1A1A1A 55%);
+    background-size: 300%;
+    background-position-x: 100%;
+    animation: shimmer 1.5s infinite linear;
     color: white;
     padding: 15px 20px;
-    border: none;
+    border: 1px #2A2A2A solid;
     border-radius: 5px;
     font-size: 1.1rem;
     cursor: pointer;
@@ -722,7 +780,8 @@ body.loaded #main-content {
     background-size: 300%;
     background-position-x: 100%;
     animation: shimmer 1.5s infinite linear;
-    border: 1px solid black;
+    color: #00ffd5;
+    border: 1px #00ffd5 solid;
 }
 
 .spinner {
@@ -759,7 +818,7 @@ footer {
     background-color: #121212;
 }
 
-.copyright{
+.copyright {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1201,7 +1260,7 @@ footer a:hover {
 
     footer .links {
         width: 100%;
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
 
     footer ul {
