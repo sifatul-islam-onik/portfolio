@@ -20,21 +20,57 @@
         <form class="login-form" action="/login.php" method="post">
             <h2 class="login-heading">Login to Dashboard</h2>
             <input type="password" class="password" id="password" name="password" placeholder="Password" required>
+            
+            <div class="remember-me-container">
+                <label class="remember-me-label">
+                    <input type="checkbox" name="remember_me" id="remember_me" class="remember-me-checkbox">
+                    <span class="remember-me-text">Remember me for 30 days</span>
+                </label>
+            </div>
+            
             <button type="submit" class="login-button">Login</button>
         </form>
     </div>
     <?php
     session_start();
     require 'db.php';
+    require 'remember_me.php';
+
+    // Check if user is already logged in via remember me token
+    $rememberMeToken = $rememberMe->getRememberMeToken();
+    if ($rememberMeToken) {
+        $adminId = $rememberMe->validateToken($rememberMeToken);
+        if ($adminId) {
+            $_SESSION['logged_in'] = true;
+            $_SESSION['admin_id'] = $adminId;
+            header("Location: dashboard.php");
+            exit();
+        } else {
+            // Invalid token, clear the cookie
+            $rememberMe->clearRememberMeCookie();
+        }
+    }
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $inputPassword = $_POST['password'];
-        $stmt = $pdo->prepare("SELECT password FROM admin WHERE id = 1 LIMIT 1");
+        $rememberMeChecked = isset($_POST['remember_me']) && $_POST['remember_me'] === 'on';
+        
+        $stmt = $pdo->prepare("SELECT id, password FROM admin WHERE id = 1 LIMIT 1");
         $stmt->execute();
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if ($result && password_verify($inputPassword, $result['password'])) {
             $_SESSION['logged_in'] = true;
+            $_SESSION['admin_id'] = $result['id'];
+            
+            // Handle remember me functionality
+            if ($rememberMeChecked) {
+                $token = $rememberMe->generateToken($result['id']);
+                if ($token) {
+                    $rememberMe->setRememberMeCookie($token);
+                }
+            }
+            
             header("Location: dashboard.php");
             exit();
         } else {

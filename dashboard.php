@@ -18,7 +18,30 @@
 <body>
     <?php
     session_start();
-    if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
+    require 'db.php';
+    require 'remember_me.php';
+    
+    // Check if user is logged in via session
+    $isLoggedIn = isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true;
+    
+    // If not logged in via session, check remember me token
+    if (!$isLoggedIn) {
+        $rememberMeToken = $rememberMe->getRememberMeToken();
+        if ($rememberMeToken) {
+            $adminId = $rememberMe->validateToken($rememberMeToken);
+            if ($adminId) {
+                $_SESSION['logged_in'] = true;
+                $_SESSION['admin_id'] = $adminId;
+                $isLoggedIn = true;
+            } else {
+                // Invalid token, clear the cookie
+                $rememberMe->clearRememberMeCookie();
+            }
+        }
+    }
+    
+    // Redirect if still not logged in
+    if (!$isLoggedIn) {
         header("Location: /login.php");
         exit();
     }
