@@ -36,7 +36,6 @@
     require 'db.php';
     require 'remember_me.php';
 
-    // Check if user is already logged in via remember me token
     $rememberMeToken = $rememberMe->getRememberMeToken();
     if ($rememberMeToken) {
         $adminId = $rememberMe->validateToken($rememberMeToken);
@@ -46,7 +45,6 @@
             header("Location: dashboard.php");
             exit();
         } else {
-            // Invalid token, clear the cookie
             $rememberMe->clearRememberMeCookie();
         }
     }
@@ -63,7 +61,6 @@
             $_SESSION['logged_in'] = true;
             $_SESSION['admin_id'] = $result['id'];
             
-            // Handle remember me functionality
             if ($rememberMeChecked) {
                 $token = $rememberMe->generateToken($result['id']);
                 if ($token) {
